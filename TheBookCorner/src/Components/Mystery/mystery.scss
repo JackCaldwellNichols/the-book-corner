@@ -1,0 +1,29 @@
+.mystery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+
+    h1{
+        font-family: 'Montserrat';  
+        letter-spacing: 1px;
+    }
+
+    .wrapper{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Montserrat';
+            gap: 10px;
+            img{
+                height: 20rem;
+                cursor: pointer;
+            }
+        }
+    }
+    }

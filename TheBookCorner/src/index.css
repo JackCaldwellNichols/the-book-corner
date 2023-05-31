@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #DECBA4, #3E5151);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}

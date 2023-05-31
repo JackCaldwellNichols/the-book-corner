@@ -1,0 +1,15 @@
+button{
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    width: 200px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    &:hover {
+        &:hover{
+            background-color: rgb(8, 70, 70);
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    height: 60px;
+    background-color: teal;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    .left{
+        flex:1;
+        margin-left: 20px;
+        .homeIcon{
+            cursor: pointer;
+            font-size: 25px;
+        }
+    }
+    .center{
+        flex:3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .inputContainer{
+            width: 420px;
+            input{
+                height: 30px;
+                width: 300px;
+                padding-left: 5px;
+                border: 1px solid white;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .searchBtn{
+                width: 50px;
+                height: 34px;
+                border: 1px solid white;
+                color: white;
+                background-color: teal;
+                cursor: pointer;
+                &:hover{
+                    background-color: rgb(8, 70, 70);
+                }
+            }
+        }        
+    }
+    .right{
+        flex:1;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 20px;
+        margin-right: 20px;
+        .profilePic{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .profilePicLetter{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 1px solid white;
+            object-fit: cover;
+            cursor: pointer;
+            color: white;
+        }
+        span{
+            cursor: pointer;
+            
+        }
+        .cart{
+            position: relative;
+            .cartIcon{
+                cursor: pointer;
+                font-size: 30px;
+               
+            }
+            .counter {
+                background-color: yellow;
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                top: -3px;
+                right: -2px;
+                font-size: 7px;
+                color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+        }
+    }
+    
+}

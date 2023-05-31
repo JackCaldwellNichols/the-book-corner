@@ -1,0 +1,71 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: calc(100vh - 100px);
+    font-family: 'Montserrat';
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .top{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 300px;
+            gap: 10px;
+            margin-bottom: 20px;
+            .profilePic{
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .editPencil {
+                position: absolute;
+                color: white;
+                bottom: 50px;
+                right: 2px;
+                border: 1px solid rgb(255, 255, 255);
+                border-radius: 50%;
+                padding: 5px;
+                cursor: pointer;
+            }
+        }
+        .bottom{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+            .bioItem{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 10px;
+                input{
+                    height: 40px;
+                    width: 200px;
+                }
+            }
+        }
+    }
+    .reviews{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;     
+        .reviewList{
+         display: flex;
+         align-items: center;
+         justify-content: space-around;      
+         flex-wrap: wrap;      
+        }
+    }
+}

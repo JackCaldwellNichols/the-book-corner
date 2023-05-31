@@ -1,0 +1,11 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    .searchCardImg{
+        height: 300px;
+      
+    }
+}

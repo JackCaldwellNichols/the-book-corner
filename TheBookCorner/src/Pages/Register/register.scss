@@ -1,0 +1,80 @@
+.register{
+    background: url('https://cdn.pixabay.com/photo/2020/07/23/01/29/books-5430104_1280.jpg');
+    height: 100vh;
+    background-size: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .wrapper{   display: flex;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1{
+            font-family: 'Josefin Sans';
+            font-size: 80px;
+            color: rgb(248, 242, 178);
+            text-shadow: 3px 3px 3px #000;
+        }
+        .top{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: white;
+            font-family: 'Montserrat';
+            font-size: 20px;
+            font-weight: bold;
+            input{
+                height: 30px;
+                width: 200px;
+            }
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: white;
+            font-family: 'Montserrat';
+            font-size: 20px;
+            font-weight: bold;
+            input{
+                height: 30px;
+                width: 200px;
+            }
+        }
+        .btnDiv{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-family: 'Montserrat';
+        .regBtn{
+            margin-top: 30px;
+            background-color: teal;
+            width: 208px;
+            height: 36px;
+            color: white;
+            font-size: 'Montserrat';
+            border: 1px solid white;
+            cursor: pointer;
+            transition: 0.3s ease-in;
+            &:hover{
+                background-color: rgb(8, 70, 70);
+            }
+            .errMess{
+                color: red;
+                font-size: 20px;
+            }
+            
+        }
+        
+    }
+    }
+}

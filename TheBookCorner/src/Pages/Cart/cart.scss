@@ -1,0 +1,82 @@
+.cartPage{
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .top{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat';
+        }
+        .bottom {
+            width: 70%;
+            display: flex;
+            font-family: 'Montserrat';
+            .product{
+               flex: 3;
+               
+             .productDetails{
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                padding: 10px 0px;
+                gap: 60px;
+                width: 80%;
+                border-bottom: 1px solid gray;
+                img{
+                    height: 200px;
+                }
+                button{
+                    background-color: teal;
+                    color: white;
+                    padding: 10px;
+                    border: 1px solid white;
+                    width: 200px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    transition: 0.3s ease-in;
+                    &:hover {
+                        &:hover{
+                            background-color: rgb(8, 70, 70);
+                        }
+                    }
+                }
+             }   
+            }
+            .summary{
+                flex: 1;
+                height: 500px;
+                width: 200px;
+                border: 1px solid rgb(255, 255, 255);
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                font-family: 'Montserrat';
+                button{
+                    background-color: teal;
+                    color: white;
+                    padding: 10px;
+                    border: 1px solid white;
+                    width: 200px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    transition: 0.3s ease-in;
+                    &:hover {
+                        &:hover{
+                            background-color: rgb(8, 70, 70);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
