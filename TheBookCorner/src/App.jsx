@@ -29,9 +29,9 @@ function App() {
           <Route element={user ? <Profile /> : <Home />} path='/profile/:id'/>
           <Route element={<Book />} path='/book/:id'/>
           <Route element={<Search />} path='/search'/>
-          <Route element={<Cart />} path='/cart'/>
-          <Route element={<Write />} path='/write'/>
-          <Route element={<PaymentSuccess />} path='/checkout-success'/>
+          <Route element={user ? <Cart /> : <Home />} path='/cart'/>
+          <Route element={user ? <Write /> : <Home />} path='/write'/>
+          <Route element={user ? <PaymentSuccess /> : <Home />} path='/checkout-success'/>
         </Routes>
   
       </BrowserRouter>
