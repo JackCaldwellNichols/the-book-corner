@@ -56,7 +56,7 @@ router.post('/login', async (req, res) => {
             isAdmin: user.isAdmin
         }, 
         process.env.JWT_SECRET,
-        {expiresIn: '2h'}
+        {expiresIn: '20s'}
         ) 
         const {password, ...others} = user._doc
         res.status(200).json({...others, accessToken})
