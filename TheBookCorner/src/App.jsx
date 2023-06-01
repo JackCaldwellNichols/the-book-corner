@@ -31,7 +31,7 @@ function App() {
           <Route element={<Search />} path='/search'/>
           <Route element={user ? <Cart /> : <Home />} path='/cart'/>
           <Route element={user ? <Write /> : <Home />} path='/write'/>
-          <Route element={user ? <PaymentSuccess /> : <Home />} path='/checkout-success'/>
+          <Route element= {<PaymentSuccess /> } path='/checkout-success'/>
         </Routes>
   
       </HashRouter>
