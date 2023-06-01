@@ -16,7 +16,6 @@ const Cart = () => {
     const handleClick = (product) => {
         dispatch(removeProduct(product))
     }
-    console.log(cart.products)
 
   return (
     <div className='cartPage'>

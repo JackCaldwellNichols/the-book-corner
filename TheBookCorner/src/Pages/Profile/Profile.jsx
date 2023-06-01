@@ -68,8 +68,6 @@ useEffect(() => {
 }, [])
 
 
-console.log(img)
-
   return (
     <div className='profile'>
       <div className="wrapper">

@@ -26,7 +26,6 @@ useEffect(() => {
       status: "Order complete"
     })
     setOrderId(res._id)
-    console.log(res.data)
   }
   createOrder()
   dispatch(cleanCart())
@@ -43,7 +42,6 @@ useEffect(() => {
   fetchOrderDetails()
 }, [orderId])
 
-console.log(details)
 
   return (
     <div className='paymentSuccess'>
