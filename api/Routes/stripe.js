@@ -36,8 +36,8 @@ router.post('/create-checkout-session', async (req, res) => {
     customer: customer.id,
     line_items,
       mode: 'payment',
-      success_url: `https://bookcorner.onrender.com/checkout-success`,
-      cancel_url: `https://bookcorner.onrender.com/cart`,
+      success_url: `${process.env.CLIENT_URL}/checkout-success`,
+      cancel_url: `${process.env.CLIENT_URL}/cart`,
     });
     res.send({url: session.url})
 })
