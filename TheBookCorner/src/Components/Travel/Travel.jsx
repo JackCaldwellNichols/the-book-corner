@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import './travel.scss'
 import axios from 'axios'
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 const Travel = () => {
 
@@ -19,12 +21,15 @@ useEffect(() => {
     getBooks()
 }, [])
 
+
+
+
   return (
     <div className='travel'>
         <h1>Travel and Adventure</h1>
         <div className="wrapper">
             {books.map((book) => {
-                if(book.genres.includes('travel')){
+                if(book.genres.includes( 'travel')){
                     return (
                     <div className="card" key={book._id}>
                         <Link to={`/book/${book._id}`}>
@@ -32,8 +37,7 @@ useEffect(() => {
                         </Link>
                         <div className="span">{book.title}</div>
                     </div>
-                    )
-                }
+                    )}
             })}
         </div>
     </div>

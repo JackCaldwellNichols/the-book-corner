@@ -20,7 +20,7 @@ useEffect(() => {
 }, [])
 
   return (
-    <div className='mystery'>
+    <div className='fantasy'>
         <h1>Fantasy</h1>
         <div className="wrapper">
             {books.map((book) => {

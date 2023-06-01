@@ -23,18 +23,18 @@ const [username, setUserName] = useState(user.username)
 const [email, setEmail] = useState(user.email)
 const [password, setPassword] = useState(user.password)
 const [file, setFile] = useState(null)
-const [img, setImg] = useState(null)
+const [img, setImg] = useState('')
 const [reviews, setReviews] = useState([])
 const {isFetching, error} = useSelector((state) => state.user)
 
-const handleSubmitImage = (e) => {
+const handleSubmitImage = async (e) => {
   e.preventDefault()
   const imageRef = ref(storage, `${user.username}/image`)
-  uploadBytes(imageRef, file).then(() => {
+  await uploadBytes(imageRef, file).then(() => {
     getDownloadURL(imageRef).then((url) => {
       setImg(url)
       try {
-        updateDetails(dispatch, path, {userId:user._id, img})
+         updateDetails(dispatch, path, {userId:user._id, img})
       } catch (error) {
         console.log(error)
       }
@@ -48,7 +48,6 @@ const handleSubmitImage = (e) => {
     console.log(error.message, "Error obtaining image URL")
   })
 }
-
 
 const handleSubmitDetails = (e) => {
   e.preventDefault()
@@ -68,7 +67,8 @@ useEffect(() => {
   fetchReviews()
 }, [])
 
-console.log(path)
+
+console.log(img)
 
   return (
     <div className='profile'>

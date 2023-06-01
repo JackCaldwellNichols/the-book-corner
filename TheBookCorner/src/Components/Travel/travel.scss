@@ -8,6 +8,7 @@
     h1{
         font-family: 'Montserrat';  
         letter-spacing: 1px;
+        color: white;
     }
 
     .wrapper{
@@ -18,11 +19,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+           
             font-family: 'Montserrat';
             gap: 10px;
+            width: 200px;
             img{
-                height: 20rem;
+                height: max-content;
+                width: 12rem;
+                object-fit: contain;
                 cursor: pointer;
+                border: 0.1px solid rgb(109, 108, 108); 
+            }
+            .span{
+                text-align: center;
+                color: white;
+                font-weight: 600;
             }
         }
     }
