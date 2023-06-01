@@ -22,8 +22,6 @@ useEffect(() => {
 }, [])
 
 
-
-
   return (
     <div className='travel'>
         <h1>Travel and Adventure</h1>

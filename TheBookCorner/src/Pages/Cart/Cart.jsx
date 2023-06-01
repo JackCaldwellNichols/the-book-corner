@@ -31,7 +31,7 @@ const Cart = () => {
                     tokenId:stripeToken.id,
                     amount:cart.total*100,
                 })
-                console.log(res.data)
+                
                 navigate('/checkout-success', {state :{
                     stripeData: res.data,
                     products: cart

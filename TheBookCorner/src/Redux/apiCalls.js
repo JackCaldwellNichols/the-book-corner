@@ -29,7 +29,7 @@ export const updateDetails = async (dispatch, path, {userId, email, username, pa
 }
 
 
-export const leave = async (dispatch, user) => {
+export const leave = async (dispatch, navigate, user) => {
     try {
         await dispatch(logout())
         navigate('/')

@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
 //get Order
 router.get('/', async (req, res) => {
     try {
-        const order = await Order.findOne(req.body.orderId)
+        const order = await Order.findById({id: req.body.orderId})
         res.status(200).json(order)
     } catch (error) {
         res.status(500).json(error)

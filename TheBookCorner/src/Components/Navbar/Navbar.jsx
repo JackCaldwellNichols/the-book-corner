@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './navbar.scss'
 import {ShoppingCartOutlined,   HomeOutlined, SearchOutlined,} from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,10 +12,10 @@ const Navbar = () => {
 
   const user = useSelector(state => state.user.currentUser)
   const dispatch = useDispatch()
-
+  const navigate = useNavigate()
   const handleLogout = () => {
     try {
-      leave(dispatch, {user})
+      leave(dispatch, navigate, {user})
     } catch (error) {
       console.log(error)
     }

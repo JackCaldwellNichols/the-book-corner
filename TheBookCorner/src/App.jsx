@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Navbar />
         <Routes>
           <Route element={<Home /> } path='/'/>
@@ -34,7 +34,7 @@ function App() {
           <Route element= {<PaymentSuccess /> } path='/checkout-success'/>
         </Routes>
   
-      </HashRouter>
+      </BrowserRouter>
     </>
   )
 }

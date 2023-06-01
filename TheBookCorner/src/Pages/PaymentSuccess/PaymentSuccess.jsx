@@ -11,7 +11,7 @@ const [orderId, setOrderId] = useState(null)
 const [details, setDetails] = useState([])
 const user = useSelector((state) => state.user.currentUser)
 const cart = useSelector(state => state.cart)
-let dateFormat = new Date(details.createdAt)
+
 
 
 useEffect(() => {
@@ -26,21 +26,28 @@ useEffect(() => {
       status: "Order complete"
     })
     setOrderId(res._id)
+    await axios.get(import.meta.env.VITE_SERVER_URL + '/order', {
+      orderId: orderId
+    })
+    setDetails(res.data)
+    console.log("NEW ORDER", res.data)
   }
   createOrder()
   dispatch(cleanCart())
 }, [])
 
-useEffect(() => {
+{/*useEffect(() => {
   const fetchOrderDetails = async () => {
     const res = await axios.get(import.meta.env.VITE_SERVER_URL + '/order', {
       orderId: orderId
     })
     setDetails(res.data)
-    
+    console.log("NEW ORDER", res.data)
   }
   fetchOrderDetails()
-}, [orderId])
+}, [orderId])*/}
+
+let dateFormat = new Date(details.createdAt)
 
 
   return (
