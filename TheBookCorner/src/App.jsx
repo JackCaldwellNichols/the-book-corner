@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, HashRouter, Routes, Route} from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import Navbar from './Components/Navbar/Navbar'
 import Book from './Pages/Book/Book'
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route element={<Home /> } path='/'/>
@@ -34,7 +34,7 @@ function App() {
           <Route element={user ? <PaymentSuccess /> : <Home />} path='/checkout-success'/>
         </Routes>
   
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
