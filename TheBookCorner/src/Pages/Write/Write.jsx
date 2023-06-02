@@ -27,6 +27,7 @@ const handleSubmit = async (e) => {
         setLoading(false)
         setDesc('')
         setTitle('')
+        navigate(`/profile/${user._id}`)
     } catch (error) {
         console.log(error)
     }
