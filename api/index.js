@@ -1,6 +1,7 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const cors = require('cors')
+const path = require('path')
 const mongoose = require('mongoose')
 const bookRoute = require('./Routes/books.js')
 const authRoute = require('./Routes/auth.js')
@@ -22,6 +23,8 @@ const port = process.env.PORT
 app.get('/', (req, res) => {
     res.send("API running")
 })
+
+
 app.use('/api/books', bookRoute)
 app.use('/api/auth', authRoute)
 app.use('/api/user', userRoute)

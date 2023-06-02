@@ -3,15 +3,17 @@ import './review.scss'
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-
+import {useNavigate} from 'react-router-dom'
 
 
 const Review = ({reviews}) => {
   const user = useSelector((state) => state.user.currentUser)
+  const navigate = useNavigate()
+
   const handleDelete = async (id) => {
     try {
       await axios.delete(import.meta.env.VITE_SERVER_URL + `/reviews/${id}`)
-      window.location.replace(`/profile/${user._id}`)
+      navigate(`/`)
     } catch (error) {
       console.log(error)
     }
