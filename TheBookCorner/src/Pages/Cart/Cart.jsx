@@ -78,7 +78,7 @@ const Cart = () => {
                         <h4>Total: ${Math.floor(cart.total * 100) / 100}</h4>
                         {/*<PayButton  products={cart.products}/>*/}
                         <StripeCheckout 
-                            name='MERN E-Shop' 
+                            name='The Book Corner' 
                             image=''
                             billingAddress
                             shippingAddress

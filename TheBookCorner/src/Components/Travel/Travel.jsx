@@ -33,7 +33,7 @@ useEffect(() => {
                         <Link to={`/book/${book._id}`}>
                          <img src={book.img} alt={book.title}/>
                         </Link>
-                        <div className="span">{book.title}</div>
+                        <div className="span">{book.title.length > 25 ? book.title.slice(0, 23) + '...' : book.title}</div>
                     </div>
                     )}
             })}

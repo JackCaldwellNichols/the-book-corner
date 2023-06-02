@@ -10,7 +10,7 @@ const Review = ({reviews}) => {
   const user = useSelector((state) => state.user.currentUser)
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(import.meta.env.VITE_SERVER_URL + `/reviews/${id}`)
+      await axios.delete(import.meta.env.VITE_SERVER_URL + `/reviews/${id}`)
       window.location.replace(`/profile/${user._id}`)
     } catch (error) {
       console.log(error)
